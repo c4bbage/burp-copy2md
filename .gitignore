@@ -3,8 +3,6 @@
 .vscode
 .vscode/
 .vscode/
-./lib/
-./build/
 ./gradle/
 ./gradlew
 ./gradlew.bat
