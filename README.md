@@ -1,6 +1,6 @@
 # Burp Suite Copy to Markdown Extension
 
-This Burp Suite extension allows you to quickly copy HTTP requests and responses to Markdown format, with table of contents and hostname information.
+When analyzing web sites through a series of HTTP requests using Burp Suite, I prefer to place all requests in a complete document for analysis, making it easy to search, add code, notes, and other information. This allows me to quickly process them into a technical document organized by requests. This extension provides functionality for Burp Suite to convert HTTP requests and responses to Markdown format, supporting automatic generation of document table of contents and hostname lists, facilitating systematic organization and analysis of network interaction data.
 
 ## Features
 

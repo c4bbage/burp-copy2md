@@ -1,6 +1,7 @@
 # Burp Suite Copy to Markdown 扩展
 
-这个 Burp Suite 扩展允许你将 HTTP 请求和响应快速复制为 Markdown 格式，并生成目录和 hostname 信息。
+通过使用Burp Suite 来分析web站点的一系列HTTP，我喜欢把所有的请求放在整个文档中进行分析，方便查找、加入代码、笔记等信息，可以迅速加工成一份以请求为目录结果的技术笔记。
+本扩展为 Burp Suite 提供了将 HTTP 请求和响应转换为 Markdown 格式的功能，支持自动生成文档目录及主机名列表，便于系统化整理和分析网络交互数据。
 
 ## 功能特点
 
