@@ -1,0 +1,12 @@
+.gradle
+.idea
+.vscode
+.vscode/
+.vscode/
+./lib/
+./build/
+./gradle/
+./gradlew
+./gradlew.bat
+./gradle/wrapper/
+.cursorrules

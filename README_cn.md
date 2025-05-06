@@ -1,0 +1,103 @@
+# Burp Suite Copy to Markdown 扩展
+
+这个 Burp Suite 扩展允许你将 HTTP 请求和响应快速复制为 Markdown 格式，并生成目录和 hostname 信息。
+
+## 功能特点
+
+- 在 Proxy History 中选择单个或多个请求并复制为 Markdown
+- 在 Intercept 中复制请求和响应为 Markdown
+- 在 Repeater 中复制请求和响应为 Markdown
+- 自动格式化为美观的 Markdown，每个请求的标题使用 URL 路径标识
+- **新增**: 自动生成文档目录和 hostname 列表
+- **新增**: 在每个请求标题中包含对应的 hostname
+
+## 构建方式
+
+本项目使用简单的 shell 脚本 `build.sh` 进行构建，不再依赖 Gradle：
+
+```bash
+# 赋予脚本执行权限
+chmod +x build.sh
+
+# 执行构建
+./build.sh
+```
+
+脚本会自动完成以下工作：
+1. 下载必要的依赖 (Burp Suite API)
+2. 编译 Java 源代码
+3. 打包为 JAR 文件
+
+构建完成后，JAR 文件将位于 `build/libs/burp-copy2md.jar`。
+
+## 使用方法
+
+1. 加载扩展后，在以下位置右键点击即可看到 "Copy to Markdown" 选项:
+   - Proxy History（代理历史）- 支持多选
+   - Intercept（拦截）
+   - Repeater（重放器）
+
+2. 点击 "Copy to Markdown" 选项，将自动复制格式化后的 Markdown 到剪贴板
+
+3. 将内容粘贴到任何支持 Markdown 的编辑器中
+
+## Markdown 格式
+
+复制的内容格式如下：
+
+```markdown
+# HTTP 请求和响应报告
+
+## Hostnames
+
+- example.com
+- api.example.org
+
+## 目录
+
+1. [/api/login](#apilogin)
+2. [/logout](#logout)
+
+## /api/login (example.com)
+### request
+```
+HTTP请求内容
+```
+### response
+```
+HTTP响应内容
+```
+
+## /logout (example.com)
+### request
+```
+HTTP请求内容
+```
+### response
+```
+HTTP响应内容
+```
+```
+
+## 安装方法
+
+1. 在 Burp Suite 中，转到 Extender（扩展）标签
+2. 点击 "Add"（添加）按钮
+3. 选择生成的 JAR 文件 (`build/libs/burp-copy2md.jar`)
+4. 点击 "Next"（下一步）完成安装
+
+## 项目清理
+
+本项目最初使用 Gradle 构建，但由于 Java 版本兼容性问题，现已改用直接编译方式。以下文件不再需要，可以安全删除：
+
+- `build.gradle`
+- `gradle.properties`
+- `gradle/` 目录
+- `gradlew`
+- `gradlew.bat`
+
+## 开发信息
+
+- 语言: Java
+- 构建工具: 直接使用 javac 和 jar 命令（通过 build.sh 脚本）
+- Burp 扩展 API 版本: 2.3 
