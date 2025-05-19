@@ -13,6 +13,8 @@ When analyzing web sites through a series of HTTP requests using Burp Suite, I p
 - **New**: Order options - copy in original order or reverse order
 - **New**: Preserve Burp comments and highlights in Markdown output
 
+![](docs/image.png)
+
 ## Build Method
 
 This project uses a simple shell script `build.sh` for building, no longer depending on Gradle:
