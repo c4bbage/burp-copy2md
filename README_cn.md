@@ -11,6 +11,8 @@
 - 自动格式化为美观的 Markdown，每个请求的标题使用 URL 路径标识
 - **新增**: 自动生成文档目录和 hostname 列表
 - **新增**: 在每个请求标题中包含对应的 hostname
+- **新增**: 排序选项 - 按原始顺序或反向顺序复制
+- **新增**: 在 Markdown 输出中保留 Burp 的注释和高亮标记
 
 ## 构建方式
 
@@ -38,7 +40,9 @@ chmod +x build.sh
    - Intercept（拦截）
    - Repeater（重放器）
 
-2. 点击 "Copy to Markdown" 选项，将自动复制格式化后的 Markdown 到剪贴板
+2. 选择以下选项之一：
+   - "Copy to Markdown" - 按原始顺序复制
+   - "Copy to Markdown reverse" - 按反向顺序复制
 
 3. 将内容粘贴到任何支持 Markdown 的编辑器中
 
@@ -60,6 +64,11 @@ chmod +x build.sh
 2. [/logout](#logout)
 
 ## /api/login (example.com)
+### 备注
+在 Burp Suite 中添加的注释
+
+*高亮标记: yellow*
+
 ### request
 ```
 HTTP请求内容

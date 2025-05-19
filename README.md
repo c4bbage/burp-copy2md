@@ -10,6 +10,8 @@ When analyzing web sites through a series of HTTP requests using Burp Suite, I p
 - Automatically format as clean Markdown, with URL path as title
 - **New**: Automatically generate document table of contents and hostname list
 - **New**: Include corresponding hostname in each request title
+- **New**: Order options - copy in original order or reverse order
+- **New**: Preserve Burp comments and highlights in Markdown output
 
 ## Build Method
 
@@ -32,12 +34,14 @@ After building, the JAR file will be located at `build/libs/burp-copy2md.jar`.
 
 ## Usage
 
-1. After loading the extension, right-click in the following locations to see the "Copy to Markdown" option:
+1. After loading the extension, right-click in the following locations to see the "Copy to Markdown" options:
    - Proxy History - supports multi-selection
    - Intercept
    - Repeater
 
-2. Click the "Copy to Markdown" option to automatically copy formatted Markdown to the clipboard
+2. Choose one of the following options:
+   - "Copy to Markdown" - Copy in original order
+   - "Copy to Markdown reverse" - Copy in reverse order
 
 3. Paste the content into any Markdown-supporting editor
 
@@ -59,6 +63,11 @@ The copied content format is as follows:
 2. [/logout](#logout)
 
 ## /api/login (example.com)
+### Note
+Comment added in Burp Suite
+
+*Highlight: yellow*
+
 ### request
 ```
 HTTP request content
